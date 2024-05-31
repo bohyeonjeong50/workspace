@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="탑메뉴.css">
+</head>
+<body>
+  <div class="container">
+    <div class="tab-btn">
+      <a href="#tab1" class="show">
+        <i class="bi bi-chat-heart"></i>ITEM 1
+      </a>
+      <a href="#tab2">
+        <i class="bi bi-apple"></i>ITEM 2
+      </a>
+      <a href="#tab3">
+        <i class="bi bi-balloon-heart"></i>ITEM 3
+      </a>
+      <a href="#tab4">
+        <i class="bi bi-cake-fill"></i>ITEM 4
+      </a>
+    </div>
+    <div class="tab-content">
+      <div class="tab-item" id="tab1">
+        <h2>ITEM1</h2>
+        <p>
+          국가는 재해를 예방하고 그 위험으로부터 국민을 보호하기 위하여 노력하여야 한다. 대통령은 법률이 정하는 바에 의하여 사면·감형 또는 복권을 명할 수 있다. 누구든지 병역의무의 이행으로 인하여 불이익한 처우를 받지 아니한다. 대통령은 국무총리·국무위원·행정각부의 장 기타 법률이 정하는 공사의 직을 겸할 수 없다.
+        </p>
+      </div>
+      <div class="tab-item" id="tab2">
+        <h2>ITEM2</h2>
+        <p>
+          헌법개정은 국회재적의원 과반수 또는 대통령의 발의로 제안된다. 지방자치단체는 주민의 복리에 관한 사무를 처리하고 재산을 관리하며, 법령의 범위안에서 자치에 관한 규정을 제정할 수 있다. 모든 국민은 법률이 정하는 바에 의하여 국방의 의무를 진다. 헌법재판소의 조직과 운영 기타 필요한 사항은 법률로 정한다.
+        </p>
+      </div>
+      <div class="tab-item" id="tab3">
+        <h2>ITEM3</h2>
+        <p>
+          대한민국은 국제평화의 유지에 노력하고 침략적 전쟁을 부인한다. 누구든지 체포 또는 구속을 당한 때에는 즉시 변호인의 조력을 받을 권리를 가진다. 다만, 형사피고인이 스스로 변호인을 구할 수 없을 때에는 법률이 정하는 바에 의하여 국가가 변호인을 붙인다. 여자의 근로는 특별한 보호를 받으며, 고용·임금 및 근로조건에 있어서 부당한 차별을 받지 아니한다.
+        </p>
+      </div>
+      <div class="tab-item" id="tab4">
+        <h2>ITEM4</h2>
+        <p>
+          일반사면을 명하려면 국회의 동의를 얻어야 한다. 대통령후보자가 1인일 때에는 그 득표수가 선거권자 총수의 3분의 1 이상이 아니면 대통령으로 당선될 수 없다. 제1항의 탄핵소추는 국회재적의원 3분의 1 이상의 발의가 있어야 하며, 그 의결은 국회재적의원 과반수의 찬성이 있어야 한다. 다만, 대통령에 대한 탄핵소추는 국회재적의원 과반수의 발의와 국회재적의원 3분의 2 이상의 찬성이 있어야 한다.
+        </p>
+      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('a').forEach((element, i) => {
+      element.addEventListener('click', (e) => {
+        document.querySelectorAll('a').forEach((a_tag, idx) => {
+          a_tag.classList.remove('show');
+        });
+        e.target.classList.add('show');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* position을 absolute면 해당 태그는 display속성이 inline-block */
+
+body{
+  background-color: rgba(245, 50, 115, 0.747);
+  width: 100vw;
+}
+
+.container{
+  width: 80%;
+  margin: 20px auto;
+  padding: 16px;
+  background-color: azure;
+}
+
+.header{
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.header > span{
+  color: white;
+  background-color: rgb(169, 107, 228);
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 8px 20px;
+}
+
+.header > h1{
+  font-size: 2.5rem;
+  margin: 20px 0px 10px 0px;
+}
+
+.header > h1 > span{
+  color: lightskyblue;
+ 
+}
+
+.header > p{
+  line-height: 26px;
+}
+
+.list{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.member{
+  
+  position: relative;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.intro{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: white;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.4);
+  height: 100%;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.member:hover .intro{
+  display: flex;
+  visibility: visible;
+}
+
+.sns{
+  font-size: 1.5rem;
+}
+
+.sns > span:hover{
+  color: lightskyblue;
+  cursor: pointer;
+}

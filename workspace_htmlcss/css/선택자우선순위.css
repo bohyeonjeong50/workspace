@@ -1,0 +1,15 @@
+.p1{
+  color: red;
+  background-color: black;
+}
+div{
+  color: brown !important;
+  background-color: aquamarine;
+}
+
+.d1{
+  color: coral;
+}
+#d1{
+  color: red;
+}

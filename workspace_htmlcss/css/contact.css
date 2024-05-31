@@ -1,0 +1,43 @@
+body{
+  background-color: plum;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact{
+  width: 300px;
+  height: 70px;
+  background-color: white;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  transition: all 0.5s;
+}
+
+img{
+  width: 50px;
+  border: 1px solid lightcoral;
+  border-radius: 50%;
+}
+
+.name{
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.email{
+  font-size: 0.9rem;
+  color: skyblue;
+}
+
+.contact:hover{
+  scale: 1.1;
+}

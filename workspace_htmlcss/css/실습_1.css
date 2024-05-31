@@ -1,0 +1,42 @@
+body{
+  background-color: rgb(233, 176, 195);
+}
+
+.container{
+  width: 1600px;
+  height: 1000x;
+  background-color: aliceblue;
+  margin: 20px 150px;
+
+  text-align: center;
+}
+
+.container button{
+  background-color: rgb(172, 131, 211);
+  color: white;
+  border-radius: 15px;
+  border: none;
+  width: 90px;
+  height: 30px;
+  cursor: pointer;
+  transition: all 03s;
+  
+}
+
+.container button:hover{
+  background-color: rgb(198, 165, 228);
+}
+
+.text1{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+span{
+  color: skyblue;
+}
+
+.img-div{
+  width: 10px;
+  height: 30px;
+}

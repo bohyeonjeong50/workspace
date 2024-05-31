@@ -1,0 +1,19 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container{
+  width: 800px;
+  height: 300px;
+  /* 
+  첫번째 : x축으로의 그림자 이동
+  두번째 : y축으로의 그림자 이동
+  세번째 : 그림자의 퍼짐 정도
+  네번째 : 그림자의 색
+   */
+  box-shadow: 0px 0px 4px lightgray;
+}
+

@@ -1,0 +1,22 @@
+.p1{
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(96, 155, 209);
+}
+
+span{
+  color: red;
+  font-size: 13px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.p2{
+  font-weight: bold;
+  text-align: center;
+}
+
+.p3{
+  width: 230px;
+}

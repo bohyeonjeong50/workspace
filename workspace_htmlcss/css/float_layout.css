@@ -1,0 +1,40 @@
+
+.container{
+  width: 100vw;
+  background-color: #C738BD;
+  padding: 16px;
+  text-align: center;
+}
+
+.header{
+  height: 100px;
+  width: 100%;
+  background-color: #FFC96F;
+  line-height: 100px;
+}
+
+.main{
+  background-color: cadetblue;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.main > div{
+  height: 500px;
+}
+
+.main > div:nth-child(1){
+  width: 20%;
+  background-color: #FFA27F;
+  float: left;
+}
+.main > div:nth-child(2){
+  width: 80%;
+  background-color: #A1DD70
+  ;
+  float: left;
+}
+
+.footer{
+  width: ;
+}
