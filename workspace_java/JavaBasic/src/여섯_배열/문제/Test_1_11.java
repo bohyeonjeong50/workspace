@@ -5,9 +5,25 @@ package 여섯_배열.문제;
 public class Test_1_11 {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
-        for (int i = 1; i < 9; i = i + 1 ){
-            System.out.println(i);
+
+        int cnt = 0;
+        for(int e : arr){
+            if(e % 2 == 0){
+                cnt++;
+            }
         }
+        System.out.println(cnt);
+
+//        int cnt = 0;
+//        for(int i = 0; i < arr.length; i++){
+//            if (arr[i] % 2 == 0){
+//                cnt++;
+//            }
+//        }
+//        System.out.println(cnt);
+
+
+
 
 
 
