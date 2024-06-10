@@ -40,7 +40,7 @@ public class Test_심화 {
 //
 //        int index = 0;
 //        for(int i = 0; i < array.length; i++){
-//            if(array[i] % 2 == 0){
+//            if(array[i] % 2 == 0){n xcvbvcw677
 //                resultArr[index] = array[i];
 //                index++;
 //            }
