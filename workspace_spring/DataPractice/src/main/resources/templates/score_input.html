@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  [[${name}]] <br>
+  <form action="/c" method="post">
+    <h3>학생 성적 입력 프로그램</h3>
+    <input type="hidden" name="name" th:value="${name}">
+    학년 <input type="text" name="age"> <br>
+    연락처 <input type="text"><input type="text"> <br>
+    성별 <input type="radio" name="gender" value="male"> 남
+         <input type="radio" name="gender" value="female"> 여 <br>
+         <input type="button" value="확인"> <input type="button" value="뒤로가기">
+         <input type="submit" value="다음페이지">
+  </form>
+  
+
+</body>
+</html>
