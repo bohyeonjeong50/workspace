@@ -1,0 +1,67 @@
+.header{
+  width: 100vw;
+  height: 80px;
+  background-color: white;
+  display: flex;
+  
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+li{
+  cursor: pointer;
+}
+
+li:hover{
+  color: lightcoral;
+}
+
+.header1{
+  border: 1px solid lightgray;
+  
+}
+
+ul{
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+
+.banner > img{
+  width: 100%;
+  height: 300px;
+}
+
+img{
+  display: block;
+}
+
+.banner > div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: lightsalmon;
+  width: 400px;
+  text-align: center;
+  padding: 20px 30px;
+  transform: translate(-50%, -50%);
+}
+
+.banner h2{
+  margin-bottom: 12px;
+}
+
+.banner span{
+  color: white;
+}
+
+.banner button{
+  border: none;
+  color: white;
+  background-color: lightcoral;
+  width: 50px;
+  height: 30px;
+}
