@@ -6,31 +6,68 @@
   <title>Document</title>
 </head>
 <body>
- <div>
+
+ <div style="margin: 800px; margin-top: 30px; ">
   <div>
-    <input type="checkbox" id="chk">전체선택 / 해제
+    <input type="checkbox" id="chkAll" onclick="checkAll()"> 전체선택 / 해제
   </div>
+
+  <br>
+
   <div>
-   <ul>
-    <li><input type="checkbox">토핑추가</li>
-    <li><input type="checkbox">치즈크러스트 추가</li>
-    <li><input type="checkbox">콜라 추가</li>
-   </ul>
-  </div>
-  <div>
-    <ul>
-      <li><input type="checkbox">양념 추가</li>
-      <li><input type="checkbox">샐러드 추가</li>
-      <li><input type="checkbox">매운 소스 추가</li>
-    </ul>
-  </div>
-  <div>
-    <ul>
-      <li><input type="checkbox">맛보기불족 추가</li>
-      <li><input type="checkbox">보쌈김치 추가</li>
-      <li><input type="checkbox">막국수 추가</li>
-    </ul>
+
+     <div>
+      1. <input type="checkbox" class="check"> 피자
+       <ul>
+        <li><input type="checkbox">토핑추가</li>
+        <li><input type="checkbox">치즈크러스트 추가</li>
+        <li><input type="checkbox">콜라 추가</li>
+       </ul>
+     </div>
+    
+      <div>
+        2. <input type="checkbox" class="check"> 치킨 
+        <ul>
+          <li><input type="checkbox">양념 추가</li>
+          <li><input type="checkbox">샐러드 추가</li>
+          <li><input type="checkbox">매운 소스 추가</li>
+        </ul>
+      </div>
+     
+      <div>
+        3. <input type="checkbox" class="check"> 족발
+        <ul>
+          <li><input type="checkbox">맛보기불족 추가</li>
+          <li><input type="checkbox">보쌈김치 추가</li>
+          <li><input type="checkbox">막국수 추가</li>
+        </ul>
+      </div> 
+
   </div>
  </div>
+
+ <script>
+
+    //모든 체크박스 선택
+    const chks = document.querySelectorAll('.chk');
+
+     //체크 되었을 때
+     if(isChecked){
+        //모든 체크박스를 체크!
+        for(const chk of chks){
+          chk.checked = true;
+        }
+      }
+
+      //체크 해제 되었을 때
+      else{
+        //모든 체크박스 체크 해제!
+        for(const chk of chks){
+          chk.checked = false;
+        }
+      }
+  }
+ </script>
+
 </body>
 </html>
