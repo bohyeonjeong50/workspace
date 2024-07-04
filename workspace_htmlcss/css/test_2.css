@@ -1,6 +1,6 @@
 .container{
   width: 1000px;
-  margin: 10px;
+  margin: 30px;
 }
 
 .header{
@@ -36,8 +36,8 @@ ul{
 }
 
 .banner > img{
-  width: 200%;
-  height: 300px;
+  width: 186%;
+  height: 350px;
 
 }
 
@@ -53,22 +53,39 @@ img{
   width: 400px;
   text-align: center;
   padding: 20px 30px;
-  transform: translate(0px, -300px);
+  transform: translate(-200px, -300px);
 }
 
-.banner h2{
-  margin-bottom: 12px;
+.banner{
+  margin-bottom: 20px;
 }
 
 .banner span{
   color: white;
+  margin: 10px;
+
 }
 
 .banner button{
   border: none;
   color: white;
   background-color: lightcoral;
-  width: 100px;
+  width: 150px;
   height: 30px;
-  margin-bottom: 12px;
+  margin-top: 20px;
 }
+
+.middle {
+  font-size: 30px;
+}
+
+.middle-1{
+  display: flex;
+  justify-content: space-around;
+}
+
+.middle-2{
+  font-size: 30px;
+}
+
+
