@@ -4,56 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .container{
+      width: 600px;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
 
- <div style="margin: 800px; margin-top: 30px; ">
+ <div class="container">
   <div>
     <input type="checkbox" id="chkAll" onclick="checkAll()"> 전체선택 / 해제
   </div>
 
   <br>
 
-  <div>
+  <ol>
 
-     <div>
-      1. <input type="checkbox" class="check"> 피자
+     <li>
+      <input type="checkbox" class="check" onclick="checkAllOption(this)" > 피자
        <ul>
-        <li><input type="checkbox">토핑추가</li>
-        <li><input type="checkbox">치즈크러스트 추가</li>
-        <li><input type="checkbox">콜라 추가</li>
+        <li><input type="checkbox" class="check">토핑추가</li>
+        <li><input type="checkbox" class="check">치즈크러스트 추가</li>
+        <li><input type="checkbox" class="check">콜라 추가</li>
        </ul>
-     </div>
+     </li>
     
-      <div>
-        2. <input type="checkbox" class="check"> 치킨 
+      <li>
+        <input type="checkbox" class="check" onclick="checkAllOption(this)"> 치킨 
         <ul>
-          <li><input type="checkbox">양념 추가</li>
-          <li><input type="checkbox">샐러드 추가</li>
-          <li><input type="checkbox">매운 소스 추가</li>
+          <li><input type="checkbox" class="check">양념 추가</li>
+          <li><input type="checkbox" class="check">샐러드 추가</li>
+          <li><input type="checkbox" class="check">매운 소스 추가</li>
         </ul>
-      </div>
+      </li>
      
-      <div>
-        3. <input type="checkbox" class="check"> 족발
+      <li>
+        <input type="checkbox" class="check" onclick="checkAllOption(this)"> 족발
         <ul>
-          <li><input type="checkbox">맛보기불족 추가</li>
-          <li><input type="checkbox">보쌈김치 추가</li>
-          <li><input type="checkbox">막국수 추가</li>
+          <li><input type="checkbox" class="check">맛보기불족 추가</li>
+          <li><input type="checkbox" class="check">보쌈김치 추가</li>
+          <li><input type="checkbox" class="check">막국수 추가</li>
         </ul>
-      </div> 
+      </li> 
 
-  </div>
+  </ol>
  </div>
 
  <script>
+  function checkAll(){
+
+    const chkAll = document.querySelector('#chkAll');
+    const isChecked = chkAll.checked;
 
     //모든 체크박스 선택
-    const chks = document.querySelectorAll('.chk');
+    const chks = document.querySelectorAll('.check');
 
      //체크 되었을 때
      if(isChecked){
-        //모든 체크박스를 체크!
         for(const chk of chks){
           chk.checked = true;
         }
@@ -61,13 +71,32 @@
 
       //체크 해제 되었을 때
       else{
-        //모든 체크박스 체크 해제!
         for(const chk of chks){
           chk.checked = false;
         }
       }
+    }
+
+    function checkAllOption(selectedTag){
+      selectedTag.nextElementSibling.querySelector('input');
+    
+      if(isChecked){
+        for(const chk of chks){
+          chk.checked = true;
+        }
+      } 
+
+      else{
+        for(const chk of chks){
+          chk.checked = false;
+        }
+      }
+    
+    }
+
   
  </script>
+
 
 </body>
 </html>
