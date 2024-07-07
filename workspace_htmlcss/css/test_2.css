@@ -1,17 +1,20 @@
 .container{
-  width: 1000px;
-  margin: 30px;
+ margin: 20px;
 }
 
 .header{
-  width: 100vw;
-  height: 80px;
-  background-color: white;
-  display: flex;
-  
-  justify-content: space-around;
-  align-items: center;
-  position: relative;
+  height: 50%;
+ display: flex;
+ margin: 20px;
+}
+
+.header > :nth-child(1){
+  flex-basis: 60%;
+  text-align: center;
+}
+
+.header > :nth-child(2){
+  flex-basis: 40%;
 }
 
 li{
@@ -22,38 +25,46 @@ li:hover{
   color: lightcoral;
 }
 
-.header1{
-  border: 1px solid lightgray;
-  
-}
 
-ul{
+ul > li{
   font-size: 15px;
   font-weight: bold;
-  display: flex;
-  width: 400px;
-  justify-content: space-between;
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+}
+
+.d1{
+  width: 250px;
+  height: 25px;
+  position: absolute;
+  right: 150px;
+  top: 21px;
+  border: 1px solid lightgrey;
+}
+
+.d2{
+  position: absolute;
+  right: 155px;
+  top: 25px;
+  color: orange;
+  cursor: pointer;
 }
 
 .banner > img{
-  width: 186%;
-  height: 350px;
+  width: 100%;
+  height: 250px;
 
-}
-
-img{
-  display: block;
 }
 
 .banner > div{
-  position: absolute;
   top: 50%;
   left: 50%;
-  color: lightsalmon;
-  width: 400px;
+  color: orange;
+  width: 500px;
   text-align: center;
-  padding: 20px 30px;
-  transform: translate(-200px, -300px);
+  position: absolute;
+  transform: translate(-50%, -300%);
 }
 
 .banner{
@@ -63,29 +74,44 @@ img{
 .banner span{
   color: white;
   margin: 10px;
-
+  font-size: 12px;
 }
 
 .banner button{
   border: none;
   color: white;
-  background-color: lightcoral;
+  background-color: orange;
   width: 150px;
   height: 30px;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .middle {
-  font-size: 30px;
+  margin: 70px;
+  text-align: center;
 }
 
 .middle-1{
+  width: 200px;
+  height: 200px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  
+}
+
+.m1{
+  color: orange;
+  width: 80px;
+  height: 80px;
+  border: 15px solid orange;
+  border-radius: 50%;
+  padding: 15px;
 }
 
 .middle-2{
-  font-size: 30px;
+ margin: 70px;
+ text-align: center;
 }
 
 
