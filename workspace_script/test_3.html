@@ -4,19 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  
+  
+  
 </head>
 <body>
   <div>
     <div><h3>문제 3번. 아래 입력한 행과 열을 갖는 표 생성</h3></div>
     <div>
-      <div>행 - <input type="text" id="tr"></div>
-      <div>열 - <input type="text" id="td"></div>
-      <div><input type="button" value="표 생성" onclick=""></div>
+      <div>행 - <input type="text" id="addRow"></div>
+      <div>열 - <input type="text" id="addRow"></div>
+      <div><input type="button" value="표 생성" onclick="addRow()"></div>
+    </div>
+    <div id="result">
     </div>
     <div>
       <span>이 곳에 테이블을 생성하세요. <br>
       이 안내문구는 테이블 생성 시 제거 되어야 합니다.</span>
+    
     </div>
   </div>
+
+  <script>
+
+    function addRow(){
+      const inputTag = document.querySelector('#addRow');
+
+      const num = inputTag.value;
+
+      let str = '';
+      for(let i = 0; i < num; i++){
+        str += `<div class="d">${i+1}</div>`;
+      }
+
+      const result_div = document.querySelector('#result');
+
+      result_div.innerHTML=''; 
+      result_div.insertAdjacentHTML('beforeend', str); 
+    }
+
+    function addRow(){
+      const str = `
+      <tr>
+        <td><input type="text"></td>
+        <td>
+          <input type="text">
+          </td>
+      </tr>
+      `;
+
+      const tbodyTag = document.querySelector('table > tbody');
+
+      tbodyTag.insertAdjacentHTML('beforeend', str);
+    }
+
+  </script>
 </body>
 </html>

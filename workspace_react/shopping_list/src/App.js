@@ -10,6 +10,7 @@ function App() {
     <div className="App">
      
       <h1>Shopping List</h1>
+      <List list={list} 
 
       {/* <setList list={list} /> */}
       
