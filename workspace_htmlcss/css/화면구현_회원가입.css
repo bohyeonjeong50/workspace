@@ -1,11 +1,51 @@
-td{
+table, td{
+  border: 1px solid lightgray;
   padding: 6px;
+  font-size: 12px;
+  margin: 30px;
 }
 
-.title-tr{
-  background-color: rgb(213, 208, 208);
+table{
+  border-collapse: collapse;
+  border: 2px solid lightgray;
+  width: 1200px;
+}
+
+tr, td{
+  border: 1px solid lightgray;
+}
+
+table > tbody > tr > td:first-child{
+  background-color: rgb(248, 246, 246);
+  width: 130px;
+  padding-left: 20px;
 }
 
 .red-font{
   color: red;
 }
+
+.head{
+  font-size: 15px;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 20px;
+
+}
+
+.wid{
+  width: 50px;
+}
+
+.wid1{
+  width: 300px;
+  margin: 2px;
+}
+
+.caption{
+  font-weight: 600;
+}
+
+
+
+
