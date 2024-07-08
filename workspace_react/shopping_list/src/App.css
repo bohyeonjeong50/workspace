@@ -1,0 +1,23 @@
+.App {
+
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.box{
+  background-color: #eeeeee;
+  padding: 10px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+span.item{
+  border: 1px solid black;
+  width: 200px;
+  display: inline-block;
+}
+
+.item-div{
+  margin-bottom: 6px;
+}

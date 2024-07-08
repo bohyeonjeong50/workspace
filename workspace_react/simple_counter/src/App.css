@@ -1,0 +1,20 @@
+.App {
+  border: 1px solid black;
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.box{
+  background-color: #eeeeee;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+button{
+  width: 60px;
+  margin: 0 8px;
+}
+
+
