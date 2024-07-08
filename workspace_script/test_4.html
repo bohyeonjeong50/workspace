@@ -54,6 +54,7 @@
  </div>
 
  <script>
+
   function checkAll(){
 
     const chkAll = document.querySelector('#chkAll');
@@ -77,8 +78,13 @@
       }
     }
 
-    function checkAllOption(selectedTag){
-      selectedTag.nextElementSibling.querySelector('ul');
+    function checkAllOption(inputTag){
+
+      const chkAll = document.querySelector('#chkAll');
+      const isChecked = chkAll.checked;
+
+    
+      const chks = inputTag.nextElementSibling.querySelector('input');
     
       if(isChecked){
         for(const chk of chks){
