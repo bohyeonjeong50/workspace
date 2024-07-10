@@ -19,8 +19,6 @@
   flex-basis: 40%;
 }
 
-
-
 li{
   cursor: pointer;
 }
@@ -29,6 +27,9 @@ li:hover{
   color: lightcoral;
 }
 
+.hover1:hover{
+  color: lightcoral;
+}
 
 ul > li{
   font-size: 15px;
@@ -118,7 +119,7 @@ ul > li{
   height: 80px;
   border: 18px solid orange;
   border-radius: 50%;
-  padding: 40px;
+  padding: 15px;
   margin: 20px;
 }
 
@@ -154,3 +155,6 @@ ul > li{
   padding: 13px
 }
 
+.point{
+  cursor: pointer;
+}

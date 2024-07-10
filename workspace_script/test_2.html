@@ -4,6 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    h3{
+      width: 600px;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+    table{
+      width: 600px;
+      margin: 0 auto;
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    tr,td{
+      border: 1px solid black;
+    }
+
+    #resultTd{
+      background: #dddddd;
+    }
+    .btnDiv{
+      margin-top: 30px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <h3>문제 2번. HTML 및 CSS 내용은 수정 금지!</h3>
@@ -20,32 +47,42 @@
         <tr>
           <td>1</td>
           <td>김자바</td>
-          <td>30</td>
+          <td class="ageTd">30</td>
         </tr>
         <tr>
           <td>2</td>
           <td>박자바</td>
-          <td>40</td>
+          <td td class="ageTd">40</td>
         </tr>
         <tr>
           <td>3</td>
           <td>최자바</td>
-          <td>25</td>
+          <td class="ageTd">25</td>
         </tr>
         <tr>
-          <td>평균나이</td>
-          <td></td>
+          <td colspan="2">평균나이</td>
+          <td id="resultTd"></td>
         </tr>
       </tbody>
     </table>
 
-    <div>
-      <input type="button" value="평균나이계산">
+    <div class="btnDiv">
+      <input type="button" value="평균나이계산" onclick="setAvgAge();">
     </div>
   </div>
 
   <script>
+   const num1 = document.querySelector('.ageTd').textContent;
+    console.log('ageTd');
+
+   const result = Number(num1)+Number(num2)+Number(num3)
    
+   const spanTag = document.querySelector('span');
+   spanTag.textContent = result;
+
+
+   
+
   </script>
 
 </body>
