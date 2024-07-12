@@ -1,0 +1,19 @@
+.item-info{
+ 
+  display: flex;
+  width: 40%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.item-info > img{
+  width: 60%;
+} 
+
+.item_info > div {
+  width: 40%;
+}
+
+.intro{
+  text-align: center;
+}
