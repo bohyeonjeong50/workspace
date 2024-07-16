@@ -19,4 +19,10 @@ public class BoardServiceImpl implements BoardService{
 
         return boardList;
     }
+
+    //게시글 상세 정보 조회
+    @Override
+    public BoardVO getBoradDetail(int boradNum) {
+        return sqlSession.selectOne("boardMapper.getBoardDetail", boradNum);
+    }
 }
