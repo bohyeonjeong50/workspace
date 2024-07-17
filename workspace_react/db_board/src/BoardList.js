@@ -25,35 +25,38 @@ const BoardList = () => {
  
 
  return(
-  <table>
-    <thead>
-      <tr>
-        <td>글번호</td>
-        <td>제 목</td>
-        <td>작성자</td>
-        <td>작성일</td>
-      </tr>
-    </thead>
-    <tbody>
-      {
-        boardList.map((board, i) => {
-          return(
-            <tr key={i}>
-              <td>{board.boardNum}</td>
-              <td>
-                <span onClick={() => {
-                  navigate(`/detail/${board.boardNum}`);
-                }}>{board.boardTitle}</span>
-                </td>
-              <td>{board.boardWriter}</td>
-              <td>{board.createDate}</td>
-            </tr>
-          )
-        })
-      }
-    </tbody>
-  </table>
- )
+<div>
+    <table>
+      <thead>
+        <tr>
+          <td>글번호</td>
+          <td>제 목</td>
+          <td>작성자</td>
+          <td>작성일</td>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          boardList.map((board, i) => {
+            return(
+              <tr key={i}>
+                <td>{board.boardNum}</td>
+                <td>
+                  <span onClick={() => {
+                    navigate(`/detail/${board.boardNum}`);
+                  }}>{board.boardTitle}</span>
+                  </td>
+                <td>{board.boardWriter}</td>
+                <td>{board.createDate}</td>
+              </tr>
+            )
+          })
+        }
+      </tbody>
+    </table>
+    <button type="button" onClick={(e) => {navigate('/write')}}>글쓰기</button>
+</div>
+ );
 }
 
 export default BoardList;
