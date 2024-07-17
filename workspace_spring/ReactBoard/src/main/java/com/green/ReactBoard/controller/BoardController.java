@@ -4,9 +4,7 @@ import com.green.ReactBoard.service.BoardService;
 import com.green.ReactBoard.vo.BoardVO;
 import jakarta.annotation.Resource;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -29,11 +27,24 @@ public class BoardController {
         return boardList; //hello.html x
     }
 
+    //상세보기
     @GetMapping("/boardDetail/{boardNum}")
     public BoardVO getBoardDetail(@PathVariable("boardNum") int boardNum){
         return boardService.getBoradDetail(boardNum);
     }
 
+    //글 등록
+    @PostMapping("/regBoard")
+    public void regBoard(@RequestBody BoardVO boardVO){
+        System.out.println(boardVO);
+        boardService.regBoard(boardVO);
+    }
+
+    //글 삭제
+    @DeleteMapping("/deleteBoard/{boardNum}")
+    public void deleteBoard(@PathVariable("boardNum") int boardNum){
+        boardService.deleteBoard(boardNum);
+    }
 }
 
 

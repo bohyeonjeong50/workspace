@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 
 const BoardDetail = () => {
+  const navigate = useNavigate();
+
   //route 의 url로 전달되는 데이터 받기
   const params = useParams();
   console.log(params);
@@ -24,23 +26,21 @@ const BoardDetail = () => {
     });
   }, []);
 
-  function get3(){
-    axios
-    .get('/')
-    .then((res) => {})
-    .catch((error) => {});
-  };
+  function deleteBoard(){
 
-  // function (){
-  //   axios
-  //   .get()
-  //   .then()
-  //   .catch();
-  // }
-
-
-  
-
+    if(window.confirm('삭제할까요?')){
+      axios
+      .delete(`/deleteBoard/${board.boardNum}`)
+      .then((res) => {
+        alert('삭제 완료');
+        navigate('/');
+      })
+      .catch((error) => {
+        alert('삭제 오류!');
+        console.log(error);
+      });
+    }
+  }
 
   return(
   <div>
@@ -50,8 +50,11 @@ const BoardDetail = () => {
     <div>작성자 : {board.boardWriter}</div>
     <div>작성일 : {board.createDate}</div>
 
-    <div><button type="button" onClick={() => {get3()}}>뒤로가기</button></div>
-    {/* <div><button type="button" onClick={() => {delete1()}}>삭제</button></div> */}
+    {/* 뒤로가기 두가지 방법 */}
+    <button type="button" onClick={() => {Navigate(-1)}}>뒤로가기1</button>
+    <button type="button" onClick={() => {Navigate('/')}}>뒤로가기2</button>
+    <button type="button" onClick={() => {deleteBoard()}}>삭제하기</button>
+  
   </div>
   );
 }

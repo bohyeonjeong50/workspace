@@ -30,8 +30,25 @@
         , BOARD_WRITER
         , CREATE_DATE
         FROM react_board
-        WHERE BOARD_NUM = #{BOARD_NUM}
+        WHERE BOARD_NUM = #{board_NUM}
     </select>
+
+    <insert id="regBoard">
+        INSERT INTO REACT_BOARD (
+            BOARD_TITLE
+                , BOARD_CONTENT
+                , BOARD_WRITER
+        ) VALUES(
+            #{boardTitle}
+            , #{boardContent}
+            , #{boardWriter}
+        )
+    </insert>
+
+    <delete id="deleteBoard">
+        DELETE FROM REACT_BOARD
+        WHERE BOARD_NUM = #{boardNum}
+    </delete>
 
 </mapper>
 
