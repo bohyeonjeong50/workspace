@@ -6,6 +6,7 @@ import StudentList from './StudentList';
 import RegStu from './RegStu';
 import Score from './Score';
 import DelStu from './DelStu';
+import DetailStu from './DetailStu';
 
 function App() {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ function App() {
           <li><span onClick={() => {navigate('/')}}>학생정보조회</span></li>
           <li><span onClick={() => {navigate('/regStu')}}>학생등록</span></li>
           <li><span onClick={() => {navigate('/delStu')}}>학생삭제</span></li>
-          <li><sapn onClick={() => {navigate('/score')}}>성적관리</sapn></li>
+          <li><span onClick={() => {navigate('/score')}}>성적관리</span></li>
         </ul>
       </div>
       {/* 컨텐츠 영역 */}
@@ -27,6 +28,9 @@ function App() {
 
           {/* 학생정보조회 페이지 */}
           <Route path='/' element={ <StudentList /> } />
+
+          {/* 학생 상세 정보 페이지 */}
+          <Route path='/detail/:stuNum' element={ <DetailStu/> } />
 
           {/* 학생 등록 페이지 */}
           <Route path='/regStu' element={ <RegStu/> } />

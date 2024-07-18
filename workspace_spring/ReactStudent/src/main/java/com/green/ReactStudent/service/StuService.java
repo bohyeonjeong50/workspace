@@ -6,6 +6,16 @@ import java.util.List;
 
 public interface StuService {
 
-    //학생정보조회 페이지
-    List<StuVO> getStudentList();
+    //학생 목록 조회
+    List<StuVO> getStuList();
+
+    //학생 상세 정보 조회
+    StuVO getDetailStu(int stuNum);
+
+    //학생 등록
+    void insertStudent(StuVO stuVO);
+
+    //학생 삭제
+    void deleteStudent(int stuNum);
+
 }

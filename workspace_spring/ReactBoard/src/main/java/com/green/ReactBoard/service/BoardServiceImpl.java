@@ -22,8 +22,8 @@ public class BoardServiceImpl implements BoardService{
 
     //게시글 상세 정보 조회
     @Override
-    public BoardVO getBoradDetail(int boradNum) {
-        return sqlSession.selectOne("boardMapper.getBoardDetail", boradNum);
+    public BoardVO getBoradDetail(int boardNum) {
+        return sqlSession.selectOne("boardMapper.getBoardDetail", boardNum);
     }
 
     //게시글 등록

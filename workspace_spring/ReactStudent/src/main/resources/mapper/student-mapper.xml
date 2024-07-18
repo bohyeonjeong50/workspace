@@ -15,15 +15,54 @@
         <result column="STU_ADDR" property="stuAddr" />
     </resultMap>
 
-    <select id="getStudentList" resultMap="student">
-        SELECT STUDENT_NUM
-            , STU_NUM
+    <select id="getStuList" resultMap="student">
+        SELECT STU_NUM
             , STU_NAME
             , KOR_SCORE
             , ENG_SCORE
             , MATH_SCORE
         FROM REACT_STUDENT;
     </select>
+
+    <!-- 학생 상세 정보 조회 , resultmap(조회한값 어떻게 가져올래)-->
+    <select id="getDetailStu" resultMap="student">
+        SELECT STU_NUM
+            , STU_NAME
+            , KOR_SCORE
+            , ENG_SCORE
+            , MATH_SCORE
+            , STU_AGE
+            , STU_TEL
+            , STU_ADDR
+        FROM REACT_STUDENT
+        WHERE STU_NUM = #{stuNum} <!--학생 한명만 조회할때 넣어줘야함-->
+    </select>
+
+    <!--입력한값 가져올때-->
+    <insert id="insertStudent">
+        INSERT INTO REACT_STUDENT(
+            STU_NAME
+            , STU_AGE
+            , STU_TEL
+            , STU_ADDR
+            , KOR_SCORE
+            , ENG_SCORE
+            , MATH_SCORE
+        ) VALUES (
+            #{stuName}
+            , #{stuAge}
+            , #{stuTel}
+            , #{stuAddr}
+            , 0
+            , 0
+            , 0
+        )
+    </insert>
+
+    <delete id="deleteStudent">
+        DELETE FROM REACT_STUDENT
+        WHERE STU_NUM = #{stuNum}
+    </delete>
 
 </mapper>
 

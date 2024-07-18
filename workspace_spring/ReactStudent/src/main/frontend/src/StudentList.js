@@ -1,5 +1,24 @@
-const StudentList = () => {
+import axios from "axios";
+import { useEffect, useState } from "react";
+import './StudentList.css';
+import { useNavigate } from "react-router-dom";
 
+const StudentList = () => {
+  //학생 목록을 저장할 state 변수
+  const [StudentList, setStuList] = useState([]);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    axios
+    .get('/getStuList')
+    .then((res) => {
+      setStuList(res.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  }, []);
 
   
   return(
@@ -19,14 +38,31 @@ const StudentList = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>홍길동</td>
-              <td>80</td>
-              <td>90</td>
-              <td>100</td>
-              <td>90</td>
-            </tr>
+            {
+              StudentList.length == 0 ?
+              <tr>
+                <td colSpan='6'>조회된 데이터가 없습니다</td>
+              </tr>
+              : 
+              StudentList.map((stu, i) => {
+                const avg = (stu.korScore + stu.engScore + stu.mathScore) / 3;
+                return(
+                  <tr key={i}>
+                    {/* 게시판 순서번호 */}
+                    <td>{i + 1}</td> 
+                    {/* 역순으로 게시판 순서 */}
+                    {/* <td>{StudentList.length - i}</td>  */}
+                    <td>
+                      <span onClick={(e) => {navigate(`/detail/${stu.stuNum}`)}}>{stu.stuName}</span>
+                    </td>
+                    <td>{stu.korScore}</td>
+                    <td>{stu.engScore}</td>
+                    <td>{stu.mathScore}</td>
+                    <td>{Math.round(avg * 100) / 100}</td>
+                  </tr>
+                )
+              })
+            }
           </tbody>
         </table>
       </div>
