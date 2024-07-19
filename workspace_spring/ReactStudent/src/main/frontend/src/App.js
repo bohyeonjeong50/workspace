@@ -7,8 +7,13 @@ import RegStu from './RegStu';
 import Score from './Score';
 import DelStu from './DelStu';
 import DetailStu from './DetailStu';
+import RegScore from './RegScore';
+
 
 function App() {
+
+
+
   const navigate = useNavigate();
 
   return (
@@ -40,6 +45,9 @@ function App() {
 
           {/* 성적 관리 페이지 */}
           <Route path='/score' element={ <Score /> } />
+
+          {/* 성적 등록 페이지 */}
+          <Route path='/regScore/:stuNum' element={<RegScore/>} />
 
         </Routes>
       </div>

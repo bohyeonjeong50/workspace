@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import './StudentList.css';
 import { useNavigate } from "react-router-dom";
+import * as api from './apis';
+import { getStuList } from "./apis";
 
 const StudentList = () => {
   //학생 목록을 저장할 state 변수
@@ -10,8 +12,7 @@ const StudentList = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios
-    .get('/getStuList')
+    getStuList()
     .then((res) => {
       setStuList(res.data);
     })
@@ -49,9 +50,9 @@ const StudentList = () => {
                 return(
                   <tr key={i}>
                     {/* 게시판 순서번호 */}
-                    <td>{i + 1}</td> 
+                    {/* <td>{i + 1}</td>  */}
                     {/* 역순으로 게시판 순서 */}
-                    {/* <td>{StudentList.length - i}</td>  */}
+                    <td>{StudentList.length - i}</td> 
                     <td>
                       <span onClick={(e) => {navigate(`/detail/${stu.stuNum}`)}}>{stu.stuName}</span>
                     </td>

@@ -37,6 +37,13 @@ public class StuServiceImpl implements StuService{
         sqlSession.delete("studentMapper.deleteStudent", stuNum);
     }
 
+    //학생 등록(변경)
+    @Override
+    public void updateScore(StuVO stuVO) {
+        sqlSession.update("studentMapper.updateScore", stuVO);
+
+    }
+
 
 }
 

@@ -37,6 +37,12 @@ public class StuController {
         stuService.deleteStudent(stuNum);
     }
 
+    //학생 등록(변경)
+    //update는
+    @PutMapping("/updateScore")
+    public void updateScore(@RequestBody StuVO stuVO){
+        stuService.updateScore(stuVO);
+    }
 
 
 }

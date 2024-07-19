@@ -1,6 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { getDetailStu } from "./apis";
+import * as api from './apis';
+
 
 const DetailStu = () => {
   
@@ -16,8 +19,11 @@ const DetailStu = () => {
 
   //DB에서 상세 조회한 내용을 화면에 출력
   useEffect(() => {
-    axios
-    .get(`/detailStu/${stuNum}`)
+    // axios
+    // .get(`/detailStu/${stuNum}`)
+    //${} 는 `` 안에서만 사용
+    api
+    .getDetailStu(stuNum)
     .then((res) => {
       console.log(res.data);
       setStuInfo(res.data);
