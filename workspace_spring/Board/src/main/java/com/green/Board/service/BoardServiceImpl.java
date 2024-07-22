@@ -12,7 +12,7 @@ public class BoardServiceImpl implements BoardService{
     @Autowired
     private SqlSessionTemplate sqlSession;
 
-    //게시글 목록 페이지
+    //게시글 목록 조회
     @Override
     public List<BoardVO> getBoardList() {
         return sqlSession.selectList("boardMapper.getBoardList");

@@ -32,9 +32,10 @@ const BoardList = () => {
         <table>
           <colgroup>
           <col width='10%'/>
-          <col width='*'/>
+          {/* '*'는 100%에서 나머지 뺀 전부 */}
+          <col width='*'/> 
           <col width='20%'/>
-          <col width='10%'/>
+          <col width='20%'/>
           </colgroup>
           <thead>
             <tr>
