@@ -2,6 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+	font-family: 'Ownglyph_UNZ-Rg';
+	src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/Ownglyph_UNZ-Rg.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
 
 
 html, body, div, span, applet, object, iframe,
@@ -51,7 +58,7 @@ table {
 *{
   box-sizing: border-box;
 	/* font-family: "Noto Sans", sans-serif; */
-	font-family: "Montserrat", sans-serif; 
+	font-family: 'Ownglyph_UNZ-Rg', sans-serif; 
 }
 
 

@@ -1,4 +1,8 @@
-import { useEffect } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import * as boardApi from '../apis/boardApi';
+// '..'은 상위폴더로 가란뜻
+//'*' 모든 내용을 가져오겠단뜻
 
 
 const BoardList = () => {
@@ -7,8 +11,7 @@ const BoardList = () => {
 
   //게시글 목록 조회
   useEffect(() => {
-    axios
-    .get('/board/list')
+    boardApi.getBoardList()
     .then((res) => {
       setBoardList(res.data);
     })
@@ -61,7 +64,9 @@ const BoardList = () => {
           </tbody>
         </table>
      </div>
-     <div className="btn-div"></div>
+     <div className="btn-div">
+      <button className="btn">글쓰기</button>
+     </div>
 
       
 

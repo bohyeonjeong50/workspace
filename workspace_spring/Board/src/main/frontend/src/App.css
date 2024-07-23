@@ -48,7 +48,28 @@
   left: 1px;
 }
 
+/* btn클래스가 적용된 태그가 disabled 속성이 있다면.. */
+.btn:disabled{
+  background-color: #dddddd;
+}
+
 .btn-small{
   font-size: 0.7rem;
   padding: 2px 6px;
 }
+
+/* input 태그 */
+.inp{
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #999999;
+  padding: 5px;
+  outline: none;
+}
+
+/* active는 클릭하면 색 변함
+ focus는 클릭하면 색 변하면서 색 유지*/
+ .inp:focus{
+  outline: 1px solid lightsalmon;
+  border: 2px solid lightcoral;
+} 
