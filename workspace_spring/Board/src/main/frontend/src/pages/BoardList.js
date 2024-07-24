@@ -5,7 +5,7 @@ import * as boardApi from '../apis/boardApi';
 //'*' 모든 내용을 가져오겠단뜻
 
 
-const BoardList = () => {
+const BoardList = ({loginInfo}) => {
   //조회된 게시글 목록을 저장할 변수
   const[boardList, setBoardList] = useState([]);
 
@@ -65,7 +65,14 @@ const BoardList = () => {
         </table>
      </div>
      <div className="btn-div">
-      <button className="btn">글쓰기</button>
+      {
+        loginInfo.memId != null 
+        ?
+        <button className="btn">글쓰기</button>
+        :
+        null
+      }
+      
      </div>
 
       
