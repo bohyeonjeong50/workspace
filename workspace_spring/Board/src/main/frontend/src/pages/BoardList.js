@@ -1,11 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import * as boardApi from '../apis/boardApi';
+import { useNavigate } from "react-router-dom";
 // '..'은 상위폴더로 가란뜻
 //'*' 모든 내용을 가져오겠단뜻
 
 
 const BoardList = ({loginInfo}) => {
+  const navigate = useNavigate();
   //조회된 게시글 목록을 저장할 변수
   const[boardList, setBoardList] = useState([]);
 
@@ -54,7 +56,9 @@ const BoardList = ({loginInfo}) => {
                 return(
                   <tr key={i}>
                     <td>{boardList.length - i}</td>
-                    <td>{board.title}</td>
+                    <td>
+                      <span onClick={(e) => {navigate(`/detail/${board.boardNum}`)}}>{board.title}</span>
+                    </td>
                     <td>{board.memId}</td>
                     <td>{board.createDate}</td>
                   </tr>
@@ -68,7 +72,7 @@ const BoardList = ({loginInfo}) => {
       {
         loginInfo.memId != null 
         ?
-        <button className="btn">글쓰기</button>
+        <button className="btn" onClick={(e) => {navigate('/writeForm')}}>글쓰기</button>
         :
         null
       }

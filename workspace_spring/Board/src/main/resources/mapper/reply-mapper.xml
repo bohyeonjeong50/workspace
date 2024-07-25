@@ -12,6 +12,16 @@
         <result column="BOARD_NUM" property="boardNum" />
     </resultMap>
 
+    <!--댓글 목록 조회-->
+    <select id="getReplyList" resultMap="reply">
+        SELECT REPLY_NUM
+        , REPLY_CONTENT
+        , MEM_ID
+        , REPLY_DATE
+        FROM board_reply
+        WHERE BOARD_NUM = #{boardNum}
+    </select>
+
 </mapper>
 
 

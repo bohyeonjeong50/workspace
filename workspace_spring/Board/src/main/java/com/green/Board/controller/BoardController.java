@@ -1,20 +1,24 @@
 package com.green.Board.controller;
 
 import com.green.Board.service.BoardService;
+import com.green.Board.service.BoardServiceImpl;
 import com.green.Board.vo.BoardVO;
 import jakarta.annotation.Resource;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Slf4j //log 남기고싶을때 사용 (출력문)
 @RestController
 @RequestMapping("/board")
 public class BoardController {
 
+    //me> Resource : 다른 클래스에 있는 메소드를 객체이름(boardService)으로 다시 가져옴
     @Resource(name = "boardService")
     private BoardService boardService;
+
+
 
     //게시글 목록 조회
     @GetMapping("/list")
@@ -22,11 +26,18 @@ public class BoardController {
         return boardService.getBoardList();
     }
 
-    //게시글 상세 조회
-    @GetMapping("/detail")
-    public String getDetail(){
-        return "게시글 상세";
+    //게시글 등록
+    @PostMapping("/insert") //insert쿼리는 기본적으로 post로 사용
+    public void insertBoard(@RequestBody BoardVO boardVO){
+        log.info("===== BoardController : insertBoard() run~ ======");
+        log.info(boardVO.toString());
+        boardService.insertBoard(boardVO);
     }
 
+    //게시글 상세보기
+    @GetMapping("/detail/{boardNum}")
+    public BoardVO boardDetail(@PathVariable("boardNum") int boardNum){
+       return boardService.getBoardDetail(boardNum);
+    }
 
 }
