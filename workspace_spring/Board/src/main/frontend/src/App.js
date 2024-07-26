@@ -80,7 +80,7 @@ useEffect(() => {
         <Route path='/writeForm' element={ <BoardWrite loginInfo={loginInfo}/> }/>
 
         {/* 게시글 상세 페이지 */}
-        <Route path='/detail/:boardNum' element={<BoardDetail/>} />
+        <Route path='/detail/:boardNum' element={<BoardDetail loginInfo={loginInfo}/>} />
   
        </Routes>
      </div>

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-//Service : 눈에 안보이는 객체를 생성, 다른 클래스에서 현재 클래스의 메서드를 활용하기위해 사용
+//Service : 눈에 안보이는 객체를 생성, 다른 클래스에서 현재 클래스의 메소드를 활용하기위해 사용
 @Service("boardService")
 public class BoardServiceImpl implements BoardService{
     @Autowired
@@ -30,4 +30,11 @@ public class BoardServiceImpl implements BoardService{
     public BoardVO getBoardDetail(int boardNum) {
         return sqlSession.selectOne("boardMapper.getBoardDetail", boardNum);
     }
+
+    //게시글 삭제
+    @Override
+    public void deleteBoard(int boardNum) {
+        sqlSession.delete("studentMapper.deleteBoard", boardNum);
+    }
+
 }

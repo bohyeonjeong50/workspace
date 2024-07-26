@@ -40,4 +40,10 @@ public class BoardController {
        return boardService.getBoardDetail(boardNum);
     }
 
+    //게시글 삭제
+    @DeleteMapping("/deleteBoard/{boardNum}")
+    public void deleteBoard(@PathVariable("boardNum") int boardNum){
+        boardService.deleteBoard(boardNum);
+    }
+
 }

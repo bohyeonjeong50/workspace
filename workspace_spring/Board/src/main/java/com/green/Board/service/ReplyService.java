@@ -8,4 +8,8 @@ public interface ReplyService {
 
     //댓글 목록 조회
     List<ReplyVO> getReplyList(int boardNum);
+
+    //댓글 등록
+    void insertReply(ReplyVO replyVO);
+
 }

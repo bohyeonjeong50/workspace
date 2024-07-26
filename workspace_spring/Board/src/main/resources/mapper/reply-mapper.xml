@@ -22,6 +22,18 @@
         WHERE BOARD_NUM = #{boardNum}
     </select>
 
+    <insert id="insertReply">
+        INSERT INTO BOARD_REPLY (
+            REPLY_CONTENT
+            , MEM_ID
+            , BOARD_NUM
+        ) VALUES (
+            #{replyContent}
+            , #{memId}
+            , #{boardNum}
+        )
+     </insert>
+
 </mapper>
 
 
