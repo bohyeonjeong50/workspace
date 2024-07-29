@@ -41,7 +41,7 @@ public class BoardController {
     }
 
     //게시글 삭제
-    @DeleteMapping("/deleteBoard/{boardNum}")
+    @DeleteMapping("/delete/{boardNum}")
     public void deleteBoard(@PathVariable("boardNum") int boardNum){
         boardService.deleteBoard(boardNum);
     }

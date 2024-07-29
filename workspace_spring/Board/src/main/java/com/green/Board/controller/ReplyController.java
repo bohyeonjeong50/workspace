@@ -26,4 +26,10 @@ public class ReplyController {
         replyService.insertReply(replyVO);
     }
 
+    //댓글 삭제
+    @DeleteMapping("/delete/{replyNum}")
+    public void deleteReply (@PathVariable("replyNum") int replyNum){
+        replyService.deleteReply(replyNum);
+    }
+
 }

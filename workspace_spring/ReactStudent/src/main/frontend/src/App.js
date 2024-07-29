@@ -27,6 +27,7 @@ function App() {
           <li><span onClick={() => {navigate('/score')}}>성적관리</span></li>
         </ul>
       </div>
+      
       {/* 컨텐츠 영역 */}
       <div className='content'>
         <Routes>

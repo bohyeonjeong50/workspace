@@ -48,9 +48,10 @@
 
     <!--게시글 삭제-->
     <delete id="deleteBoard">
-        DELETE FROM BOARD_NUM
+        DELETE FROM BOARD
         WHERE BOARD_NUM = #{boardNum}
     </delete>
+
 
 	
 </mapper>

@@ -23,4 +23,10 @@ public class ReplyServiceImpl implements ReplyService{
     public void insertReply(ReplyVO replyVO) {
         sqlSession.insert("replyMapper.insertReply", replyVO);
     }
+
+    //댓글 삭제
+    @Override
+    public void deleteReply(int replyNum) {
+        sqlSession.delete("replyMapper.deleteReply", replyNum);
+    }
 }
