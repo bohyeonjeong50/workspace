@@ -120,7 +120,7 @@ const BoardDetail = ({loginInfo}) => {
           loginInfo.memRole == 'ADMIN' || loginInfo.memId == boardDetail.memId
           ?
         <>
-          <button type='button'>수정</button>
+          <button type='button' onClick={(e) => {navigate(`/updateForm/${boardDetail.boardNum}`)}}>수정</button>
           <button type='button' onClick={(e) => {deleteBoard(boardDetail.boardNum)}}>삭제</button>
         </>
           :

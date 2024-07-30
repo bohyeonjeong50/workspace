@@ -3,6 +3,7 @@ import './App.css';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import MainHome from './MainHome';
 import DetailCar from './DetailCar';
+import SaleInfoReg from './SaleInfoReg';
 
 function App() {
 
@@ -26,6 +27,9 @@ function App() {
 
         {/* 차량 관리 화면 페이지 */}
         <Route path='/detail' element={ <DetailCar /> } />
+
+        {/* 판매 정보 등록 화면 페이지 */}
+        <Route path='/regForm' element={ <SaleInfoReg/> } />
 
       </Routes>
     </div>

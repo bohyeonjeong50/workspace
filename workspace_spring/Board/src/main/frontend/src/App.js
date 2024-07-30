@@ -8,6 +8,7 @@ import LoginForm from './pages/LoginForm';
 import { useEffect, useState } from 'react';
 import BoardWrite from './pages/BoardWrite';
 import BoardDetail from './pages/BoardDetail';
+import UpdateForm from './pages/UpdateForm';
 
 //재랜더링 : 값이 변한 state 변수가 선언된 컴포넌트를 다시 해석
 
@@ -81,6 +82,9 @@ useEffect(() => {
 
         {/* 게시글 상세 페이지 */}
         <Route path='/detail/:boardNum' element={<BoardDetail loginInfo={loginInfo}/>} />
+
+        {/* 게시글 수정 페이지 */}
+        <Route path='/updateForm/:boardNum' element={ <UpdateForm/> } />
   
        </Routes>
      </div>

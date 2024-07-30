@@ -18,20 +18,24 @@
             , TITLE
             , MEM_ID
             , CREATE_DATE
-        FROM BOARD
+        FROM board
+        <if test='searchValue != null and !searchValue.equals("") '>
+            WHERE ${searchType} LIKE CONCAT('%', #{searchValue}, '%')
+        </if>
+
         ORDER BY CREATE_DATE DESC
     </select>
 
     <!--게시글 등록-->
     <insert id="insertBoard">
         INSERT INTO BOARD (
-        TITLE
-        , CONTENT
-        , MEM_ID
+            TITLE
+            , CONTENT
+            , MEM_ID
         ) VALUES (
-        #{title}
-        , #{content}
-        , #{memId}
+            #{title}
+            , #{content}
+            , #{memId}
         )
     </insert>
 
@@ -52,6 +56,14 @@
         WHERE BOARD_NUM = #{boardNum}
     </delete>
 
+    <!--게시글 수정-->
+    <update id="updateBoard">
+        UPDATE BOARD
+        SET
+        TITLE = #{title},
+        CONTENT = #{content}
+        WHERE BOARD_NUM = #{boardNum}
+    </update>
 
 	
 </mapper>
