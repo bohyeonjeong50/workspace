@@ -73,3 +73,8 @@
   outline: 1px solid lightsalmon;
   border: 2px solid lightcoral;
 } 
+
+.page-span{
+  padding: 0 4px;
+  cursor: pointer;
+}
