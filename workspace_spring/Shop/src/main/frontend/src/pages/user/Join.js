@@ -4,8 +4,11 @@ import './Join.css'
 import { useDaumPostcodePopup } from 'react-daum-postcode';
 import axios from 'axios';
 import Modal from '../../common/Modal';
+import { useNavigate } from 'react-router-dom';
+import { joinValidate } from '../../validate/joinValidate';
 
 const Join = () => {
+  const navigate = useNavigate();
 
   //daum 주소 api 팝업창을 띄우기 위한 변수
   const open = useDaumPostcodePopup();
@@ -47,32 +50,65 @@ const Join = () => {
     memEmail : ''
   });
 
+  const memId_valid_tag = useRef();
+  const memName_valid_tag = useRef();
+  const confirmPw_valid_tag = useRef();
+  const memPw_valid_tag = useRef();
+  const memTel_valid_tag = useRef();
+
+
+  const valid_tag = [
+    memId_valid_tag
+    , memPw_valid_tag
+    , confirmPw_valid_tag
+    , memName_valid_tag
+    , memTel_valid_tag
+  ];
+
+  //유효성 
+
   function changeJoinData(e){
-
-    // setJoinData({
-    //   ...joinData,
-    //   [e.target.name] : e.target.name != 'memEmail' ? e.target.value : email_1.current.value + email_2.current.value
-    // });
-
-
-    //이메일을 변경했으면...
-    if(e.target.name == 'memEmail'){
-      setJoinData({
-        ...joinData,
-        [e.target.name] : email_1.current.value + email_2.current.value
-      });
+    //입력한 데이터
+    const newData = {
+      ...joinData,
+      [e.target.name] : e.target.name != 'memEmail' ? e.target.value : email_1.current.value + email_2.current.value
     }
-    else{
-      setJoinData({
-        ...joinData,
-        [e.target.name] : e.target.value
-      });
-    }
-    
+
+    //입력한 데이터에 대한 validation 처리
+     //validation 처리 : 모든 데이터가 유효한 데이터면 리턴 true
+      joinValidate(newData, valid_tag, e.target.name);
+
+    //유효성 검사 끝난 데이터를 joinData에 저장
+    setJoinData(newData);
   }
+
+  //   //이메일을 변경했으면...
+  //   if(e.target.name == 'memEmail'){
+  //     setJoinData({
+  //       ...joinData,
+  //       [e.target.name] : email_1.current.value + email_2.current.value
+  //     });
+  //   }
+  //   else{
+  //     setJoinData({
+  //       ...joinData,
+  //       [e.target.name] : e.target.value
+  //     });
+  //   }
+    
+  // }
+
+
+
 
   //회원가입 버튼 클릭시 insert 쿼리 실행하러 가기
   function join(){
+    //유효성 검사 결과가 false면 회원가입 로직 중지
+    if(!valid_result){
+      alert('입력 데이터를 확인하세요.');
+      return;
+    }
+
     axios.post('/api_member/join', joinData)
     .then((res) => {
       //모달창 띄움
@@ -122,30 +158,38 @@ const Join = () => {
                   <input className='form-control' type='text'  name='memId' onChange={(e) => {changeJoinData(e)}}/>
                   <button className='btn btn-primary' type='button' >중복확인</button>
                 </div>
+
+                <div className='feedback' ref={memId_valid_tag}>
+                </div>
+
               </td>
             </tr>
             <tr>
               <td>비밀번호</td>
               <td>
                 <input className='form-control' type='password' name='memPw' onChange={(e) => {changeJoinData(e)}}/>
+                <div className='feedback' ref={memPw_valid_tag}></div>
               </td>
             </tr>
             <tr>
               <td>비밀번호 확인</td>
               <td>
               <input className='form-control' type='password' name='memPw' onChange={(e) => {changeJoinData(e)}}/>
+              <div className='feedback' ref={confirmPw_valid_tag}></div>
               </td>
             </tr>
             <tr>
               <td>이름</td>
               <td>
               <input className='form-control' type='text' name='memName' onChange={(e) => {changeJoinData(e)}}/>
+              <div className='feedback' ref={memName_valid_tag}></div>
               </td>
             </tr>
             <tr>
               <td>연락처</td>
               <td>
               <input className='form-control' type='text' placeholder='숫자만 입력하세요'  name='memTel' onChange={(e) => {changeJoinData(e)}}/>
+              <div className='feedback' ref={memTel_valid_tag}></div>
               </td>
             </tr>
             <tr>
@@ -197,6 +241,7 @@ const Join = () => {
     </div>
   )
 }
+
 
 
 export default Join

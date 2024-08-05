@@ -205,9 +205,28 @@ input{
   }
 }
 
+.user-menu-div > .menu-ul > li{
+  width: 160px;
+  text-align: center;
+}
 
+/* validation 디자인 */
+.feedback{
+  font-size: 0.7rem;
+  margin-top: 4px;
+  /* display: none; */
+  visibility: hidden;
+}
 
+.feedback.error{
+  color: red;
+  visibility: visible;
+}
 
+.feedback.good{
+  color: rgb(89, 173, 5);
+  visibility: visible;
+}
 
 
 
