@@ -107,7 +107,7 @@ const LoginForm = ({setLoginInfo}) => {
 
       }
       else{
-        alert('ID 혹은PW 확인!');
+        alert('ID 혹은 PW 확인!');
       }
 
     })
