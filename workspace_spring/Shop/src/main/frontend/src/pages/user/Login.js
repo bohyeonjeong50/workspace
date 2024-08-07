@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Modal from '../../common/Modal';
 
-const Login = () => {
+const Login = ({setLoginInfo, loginInfo}) => {
   const navigate = useNavigate();
 
   //LOGIN버튼 클릭 시 화면에 보여지는 모달창의 상태
@@ -65,6 +65,10 @@ const Login = () => {
 
         //sessionStoragy에 로그인한 회원의 아이디, 이름, 권한정보 등록
         window.sessionStorage.setItem('loginInfo', json_loginInfo);
+
+        //로그인 정보를 저장하기 위해 만든 state 변수 loginInfo(App.js에 생성)에 
+        //로그인 정보를 저장
+        setLoginInfo(loginInfo);
       }
     })
     .catch((error) => {
@@ -91,8 +95,14 @@ const Login = () => {
   function handleBtn(){
     if(isLoginSuccess){
       //로그인 성공 시 확인 버튼 내용
-      //로그인 성공 시 상품 목록 페이지로 이동
-      navigate('/')
+      //일반유저면 -> 상품목록페이지
+      //관리자면 -> 상품등록페이지
+      if(loginInfo.memRole == 'USER'){
+        navigate('/')
+      }
+      else if(loginInfo.memRole == 'ADMIN'){
+        navigate('/admin/regItem')
+      }
     }
   }
 
