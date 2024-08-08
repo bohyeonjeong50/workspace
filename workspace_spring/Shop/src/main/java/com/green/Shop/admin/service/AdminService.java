@@ -12,4 +12,10 @@ public interface AdminService {
 
     //상품 등록
     void insertItem(ItemVO itemVO);
+
+    //상품 이미지 등록
+    void insertImgs(ItemVO itemVO);
+
+    //다음에 들어갈 item_code 조회
+    int getNextItemCode();
 }
