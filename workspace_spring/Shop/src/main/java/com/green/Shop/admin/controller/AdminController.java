@@ -6,15 +6,11 @@ import com.green.Shop.item.vo.ImgVO;
 import com.green.Shop.item.vo.ItemVO;
 import com.green.Shop.util.FileUploadUtil;
 import jakarta.annotation.Resource;
-import org.springframework.boot.autoconfigure.ssl.SslProperties;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/api_admin")
