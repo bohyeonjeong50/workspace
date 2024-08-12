@@ -8,6 +8,9 @@ import Login from './pages/user/Login';
 import { useEffect, useState } from 'react';
 import RegItem from './pages/admin/RegItem';
 import ItemList from './pages/user/ItemList';
+import SideMenu from './pages/admin/ItemManage';
+import ItemManage from './pages/admin/ItemManage';
+import SaleHistoryOfMonth from './pages/admin/SaleHistoryOfMonth';
 
 //새로고침과 재랜더링은 다르다!!!
 //새로고침하면 state 변수의 값이 전부 초기화 된다.
@@ -109,8 +112,14 @@ function App() {
             {/* 연습용 */}
             <Route path='test1' element={ <div>상품등록페이지</div> }/>
 
+            {/* 상품관리 화면 */}
+            <Route path='itemManage' element={ <ItemManage/> }/>
+
             {/* 상품 등록 화면 */}
             <Route path='regItem' element={ <RegItem /> } />
+
+            {/* 상단의 상품관리 */}
+            <Route path='saleHistoryOfMonth' element={ < SaleHistoryOfMonth/> } />
 
           </Route>
         </Routes>
