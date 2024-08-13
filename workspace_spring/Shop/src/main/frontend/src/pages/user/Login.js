@@ -1,4 +1,5 @@
 import axios from 'axios';
+import './Login.css'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Modal from '../../common/Modal';
@@ -109,12 +110,18 @@ const Login = ({setLoginInfo, loginInfo}) => {
   return (
     <div>
       
-      <input type='text' name='memId' placeholder='ID를 입력하세요.' onChange={(e) => {changeLoginData(e)}}/> <br />
-
-      <input type='password' name='memPw'
-      placeholder='PW를 입력하세요.' onChange={(e) => {changeLoginData(e)}}/> <br />
-        
-      <button type='button' onClick={(e) => {login()}}>로그인</button>
+     <div>
+        <div className = 'container'>
+          <input type='text' name='memId' placeholder='ID를 입력하세요.' onChange={(e) => {changeLoginData(e)}}/> <br />
+    
+          <input type='password' name='memPw'
+          placeholder='PW를 입력하세요.' onChange={(e) => {changeLoginData(e)}}/> <br />
+  
+          <div className='btn-div'>
+            <button type='button' className='btn btn-primary' onClick={(e) => {login()}}>로그인</button>
+          </div>
+        </div>
+     </div>
       
 
     {/* login 중 id, pw 입력 여부 확인 모달창  */}

@@ -25,7 +25,7 @@ const AdminLayout = () => {
         <span><i className="bi bi-chevron-right"></i></span>
       </li>
       <li>
-        <span>카테고리 관리</span>
+        <span onClick={() => {navigate('/adimin/categoryManage')}}>카테고리 관리</span>
         <span><i className="bi bi-chevron-right"></i></span>
       </li>
     </>
@@ -91,10 +91,22 @@ const AdminLayout = () => {
     <div>
       <div className='menu-div'>
         <ul className='menu-ul'>
-          <li><span onClick={() => {setSideMenu('itemManage')}}>상품관리</span></li>
-          <li><span onClick={() => {setSideMenu('saleManage')}}>구매관리</span></li>
-          <li><span onClick={() => {setSideMenu('userManage')}}>유저관리</span></li>
-          <li><span onClick={() => {setSideMenu('recordManage')}}>매출관리</span></li>
+          <li><span onClick={() => {
+            setSideMenu('itemManage')
+            navigate('/admin/itemManage')
+            }}>상품관리</span></li>
+          <li><span onClick={() => {
+            setSideMenu('saleManage')
+            navigate('/admin/saleHistoryOfMonth')
+            }}>구매관리</span></li>
+          <li><span onClick={() => {
+            setSideMenu('userManage')
+            navigate('/admin/searchUser')
+            }}>유저관리</span></li>
+          <li><span onClick={() => {
+            setSideMenu('recordManage')
+            navigate('/admin/recordOfMonth')
+            }}>매출관리</span></li>
         </ul>
       </div>
       <div className='side-menu-div'>

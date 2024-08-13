@@ -11,6 +11,10 @@ import ItemList from './pages/user/ItemList';
 import SideMenu from './pages/admin/ItemManage';
 import ItemManage from './pages/admin/ItemManage';
 import SaleHistoryOfMonth from './pages/admin/SaleHistoryOfMonth';
+import CategoryManage from './pages/admin/CategoryManage';
+import SearchUser from './pages/admin/SearchUser';
+import RecordOfMonth from './pages/admin/RecordOfMonth';
+import ItemDetail from './pages/user/ItemDetail';
 
 //새로고침과 재랜더링은 다르다!!!
 //새로고침하면 state 변수의 값이 전부 초기화 된다.
@@ -105,12 +109,13 @@ function App() {
             {/* 로그인 페이지 */}
             <Route path='loginForm' element={<Login setLoginInfo={setLoginInfo} loginInfo={loginInfo}/> } />
 
+            {/* 상품 상세보기 화면 */}
+            <Route path='itemDetail' element={< ItemDetail/>} />
+
           </Route>
 
           {/* 관리자용 */}
           <Route path='/admin' element={ <AdminLayout /> }>
-            {/* 연습용 */}
-            <Route path='test1' element={ <div>상품등록페이지</div> }/>
 
             {/* 상품관리 화면 */}
             <Route path='itemManage' element={ <ItemManage/> }/>
@@ -118,8 +123,17 @@ function App() {
             {/* 상품 등록 화면 */}
             <Route path='regItem' element={ <RegItem /> } />
 
-            {/* 상단의 상품관리 */}
-            <Route path='saleHistoryOfMonth' element={ < SaleHistoryOfMonth/> } />
+            {/* 카테고리 관리 */}
+            <Route path='categoryManage' element={ < CategoryManage/> } />
+
+            {/* 이달의 구매내역 */}
+            <Route path='saleHistoryOfMonth' element={< SaleHistoryOfMonth />} />
+
+            {/* 유저 검색 */}
+            <Route path='searchUser' element={< SearchUser />} />
+
+            {/* 이달의 매출 */}
+            <Route path='recordOfMonth' element={< RecordOfMonth />} />
 
           </Route>
         </Routes>

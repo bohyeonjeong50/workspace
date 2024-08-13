@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import './ItemList.css'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const ItemList = () => {
+  const navigate = useNavigate();
   //const num = 10000;
   //num.toLocaleString();
 
@@ -28,7 +30,7 @@ const ItemList = () => {
         itemList.map((item, i) => {
           return(
             <div className='item-div' key={i}>
-              <img src={`http://localhost:8080/upload/${item.imgList[0].attachedFileName}`}/>
+              <img onClick={() => {navigate('/itemDetail')}} src={`http://localhost:8080/upload/${item.imgList[0].attachedFileName}`}/>
               <h4>{item.itemName}</h4>
               <p>{'￦' + item.itemPrice.toLocaleString()}</p>
             </div>
