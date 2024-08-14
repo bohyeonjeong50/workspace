@@ -30,7 +30,7 @@ const ItemList = () => {
         itemList.map((item, i) => {
           return(
             <div className='item-div' key={i}>
-              <img onClick={() => {navigate('/itemDetail')}} src={`http://localhost:8080/upload/${item.imgList[0].attachedFileName}`}/>
+              <img onClick={() => {navigate(`/itemDetail/${item.itemCode}`)}} src={`http://localhost:8080/upload/${item.imgList[0].attachedFileName}`}/>
               <h4>{item.itemName}</h4>
               <p>{'￦' + item.itemPrice.toLocaleString()}</p>
             </div>

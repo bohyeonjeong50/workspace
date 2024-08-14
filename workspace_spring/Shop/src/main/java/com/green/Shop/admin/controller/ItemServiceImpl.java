@@ -20,4 +20,10 @@ public class ItemServiceImpl implements ItemService {
     public List<ItemVO> getItemList() {
         return sqlSession.selectList("itemMapper.getItemList");
     }
+
+    //상품 상세 조회
+    @Override
+    public ItemVO getItemDetail(int itemCode) {
+        return sqlSession.selectOne("itemMapper.getItemDetail", itemCode);
+    }
 }

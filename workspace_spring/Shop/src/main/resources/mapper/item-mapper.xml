@@ -51,6 +51,19 @@
         ORDER BY ITEM_CODE DESC
     </select>
 
+    <!--상품 상세 조회-->
+    <select id="getItemDetail" resultMap="item">
+        SELECT ITEM.ITEM_CODE
+        , ITEM_NAME
+        , ITEM_PRICE
+        , ITEM_INTRO
+        , ATTACHED_FILE_NAME
+        , IS_MAIN
+        FROM shop_item ITEM, item_img IMG
+        WHERE ITEM.ITEM_CODE = IMG.ITEM_CODE
+        AND ITEM.ITEM_CODE = #{itemCode}
+    </select>
+
 </mapper>
 
 

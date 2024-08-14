@@ -15,6 +15,7 @@ import CategoryManage from './pages/admin/CategoryManage';
 import SearchUser from './pages/admin/SearchUser';
 import RecordOfMonth from './pages/admin/RecordOfMonth';
 import ItemDetail from './pages/user/ItemDetail';
+import CartList from './pages/user/CartList';
 
 //새로고침과 재랜더링은 다르다!!!
 //새로고침하면 state 변수의 값이 전부 초기화 된다.
@@ -109,8 +110,11 @@ function App() {
             {/* 로그인 페이지 */}
             <Route path='loginForm' element={<Login setLoginInfo={setLoginInfo} loginInfo={loginInfo}/> } />
 
-            {/* 상품 상세보기 화면 */}
-            <Route path='itemDetail' element={< ItemDetail/>} />
+            {/* 상품 상세보기 페이지 */}
+            <Route path='itemDetail/:itemCode' element={< ItemDetail/>} />
+
+            {/* 장바구니 페이지 */}
+            <Route path='cartList' element={< CartList/>} />
 
           </Route>
 
