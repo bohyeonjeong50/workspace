@@ -20,6 +20,9 @@ import CartList from './pages/user/CartList';
 //새로고침과 재랜더링은 다르다!!!
 //새로고침하면 state 변수의 값이 전부 초기화 된다.
 //재랜더링하면 state 변수의 값은 보존된다.
+
+//state 변경함수는 모든 코드가 실행 된후 일괄적으로 한 번에 처리
+//state 변경함수는 비동기 방식이기 때문에 주의!
 function App() {
   const navigate = useNavigate();
 
@@ -113,7 +116,7 @@ function App() {
             {/* 상품 상세보기 페이지 */}
             <Route path='itemDetail/:itemCode' element={< ItemDetail/>} />
 
-            {/* 장바구니 페이지 */}
+            {/* 장바구니 목록 페이지 */}
             <Route path='cartList' element={< CartList/>} />
 
           </Route>
