@@ -8,7 +8,7 @@ import SaleInfoReg from './SaleInfoReg';
 function App() {
 
   const navigate = useNavigate();
-
+  return(
   <div className='container'>
     <div>
       <ul>
@@ -35,7 +35,7 @@ function App() {
     </div>
 
   </div>
-
+  )
 }
 
 export default App;
