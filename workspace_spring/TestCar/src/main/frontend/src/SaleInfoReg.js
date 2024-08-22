@@ -2,7 +2,9 @@ import React from 'react'
 
 const SaleInfoReg = () => {
   return (
-    <div>SaleInfoReg</div>
+    <div>
+      
+    </div>
   )
 }
 

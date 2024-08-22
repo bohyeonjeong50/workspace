@@ -15,8 +15,8 @@ public class CarController {
 
     //차량 목록 조회
     @GetMapping("/list")
-    public List<CarVO> getCarList(@RequestBody CarVO carVO){
-        return carService.getCarList(carVO);
+    public List<CarVO> getCarList(){
+        return carService.getCarList();
     }
 
     //차량 등록

@@ -14,8 +14,8 @@ public class CarServiceImpl implements CarService {
 
     //차량 목록 조회
     @Override
-    public List<CarVO> getCarList(CarVO carVO) {
-        return sqlSession.selectList("carMapper.getCarList", carVO);
+    public List<CarVO> getCarList() {
+        return sqlSession.selectList("carMapper.getCarList");
     }
 
     //차량 등록
