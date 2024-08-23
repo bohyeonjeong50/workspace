@@ -27,17 +27,31 @@
     <!--판매 정보 등록-->
     <insert id="insertSale">
         INSERT INTO SALES_INFO (
-            , BUYER_NAME
+            BUYER_NAME
             , CAR_COLOR
-            , CAR_NAME
+            , CAR_NUM
             , BUYER_TEL
         ) VALUES (
             #{buyerName}
             , #{carColor}
-            , #{carName}
+            , #{carNum}
             , #{buyerTel}
         )
     </insert>
+
+    <select id="getCarAll" resultMap="sale">
+        SALE_NUM
+            , BUYER_NAME
+            , BUYER_TEL
+            , SALE_DATE
+            , CAR_COLOR
+            , CAR_NAME
+            , CAR_PRICE
+        FROM SALE_INFO S, CAR_INFO C
+        WHERE S.CAR_NUM = C.CAR_NUM
+        ORDER BY SALE_DATE DESC;
+    </select>
+
 
 </mapper>
 

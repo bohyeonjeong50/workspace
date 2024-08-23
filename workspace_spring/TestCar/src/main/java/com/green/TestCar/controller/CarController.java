@@ -25,5 +25,11 @@ public class CarController {
         carService.insertCar(carVO);
     }
 
+    //차량 이름 조회
+    @GetMapping("/carNameSelect")
+    public List<CarVO> carList(){
+        return carService.carList();
+    }
+
 
 }

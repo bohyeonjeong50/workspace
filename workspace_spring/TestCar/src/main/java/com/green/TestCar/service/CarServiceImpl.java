@@ -24,4 +24,9 @@ public class CarServiceImpl implements CarService {
         sqlSession.insert("carMapper.insertCar", carVO);
     }
 
+    @Override
+    public List<CarVO> carList() {
+        return sqlSession.selectList("carMapper.carList");
+    }
+
 }

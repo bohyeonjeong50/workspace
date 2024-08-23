@@ -32,6 +32,12 @@
         )
     </insert>
 
+    <!--차량 조회-->
+    <select id="carList" resultMap="car">
+        SELECT CAR_NUM, CAR_NAME
+        FROM CAR_INFO
+    </select>
+
 </mapper>
 
 

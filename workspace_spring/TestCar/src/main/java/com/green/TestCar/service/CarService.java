@@ -11,4 +11,7 @@ public interface CarService {
 
     //차량 등록
     void insertCar(CarVO carVO);
+
+    //차량이름 조회
+    List<CarVO> carList();
 }

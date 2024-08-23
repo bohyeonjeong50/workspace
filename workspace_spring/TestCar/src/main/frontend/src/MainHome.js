@@ -4,13 +4,14 @@ import axios from 'axios';
 
 const MainHome = () => {
 
+  //차량 등록 입력하면 저장할 useState 
   const[carData, setCarData] = useState({
     carCompany : '현대',
     carName : '',
     carPrice : ''
   });
 
-
+  //차량 등록한거 목록조회하면 사용할 useState
   const[carListData, setCarListData] = useState([]);
 
   //  데이터 입력시 useState로 데이터를 보내주는 함수
@@ -48,7 +49,7 @@ const MainHome = () => {
       <h3>차량등록</h3>
 
       <div>
-        <select name='carCompany' onChange={(e) => {changeCarData(e)}}>
+        제조사<select name='carCompany' onChange={(e) => {changeCarData(e)}}>
           <option>현대</option>
           <option>쌍용</option>
           <option>기아</option>
@@ -77,7 +78,7 @@ const MainHome = () => {
             {
               carListData.map((carList, i) => {
                 return(
-                  <tr>
+                  <tr key={i}>
                     <td>{carList.carNum}</td>
                     <td>{carList.carName}</td>
                     <td>{carList.carCompany}</td>
