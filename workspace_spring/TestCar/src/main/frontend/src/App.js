@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import MainHome from './MainHome';
-import DetailCar from './DetailCar';
 import SaleInfoReg from './SaleInfoReg';
 import CarList from './CarList';
 

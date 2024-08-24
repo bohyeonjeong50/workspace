@@ -25,7 +25,7 @@ public class SaleController {
         saleService.insertSale(saleVO);
     }
 
-    //차량 구매자 정보
+    //차량 구매자, 차량 정보
     @GetMapping("/saleAllInfo")
     public List<SaleVO> getCarAll(){
         return saleService.getCarAll();

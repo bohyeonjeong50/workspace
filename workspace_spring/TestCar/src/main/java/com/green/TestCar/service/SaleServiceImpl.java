@@ -25,6 +25,7 @@ public class SaleServiceImpl implements SaleService {
         sqlSession.insert("saleMapper.insertSale", saleVO);
     }
 
+    //차량 구매자, 차량 정보
     @Override
     public List<SaleVO> getCarAll() {
         return sqlSession.selectList("saleMapper.getCarAll");
