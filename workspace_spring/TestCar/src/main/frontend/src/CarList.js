@@ -51,8 +51,8 @@ const CarList = () => {
                   <td>{carAll.buyerTel}</td>
                   <td>{carAll.saleDate}</td>
                   <td>{carAll.carColor}</td>
-                  <td>{carAll.carName}</td>
-                  <td>{carAll.carPrice}</td>
+                  <td>{carAll.carVO.carName}</td>
+                  <td>{carAll.carVO.carPrice}</td>
                 </tr>
               )
             })
