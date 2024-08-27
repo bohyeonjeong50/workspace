@@ -1,5 +1,5 @@
 .container{
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 800px;
   height: 900px;
   margin: 100px auto;
@@ -11,14 +11,13 @@
   background-color: rgba(255, 165, 129, 0.548);
 
   
-  border: 1px solid red;
+  border: 2px solid lightpink;
   display: flex;
   justify-content: space-evenly;
 }
 
-.header > ul{
+ul{
   display: flex;
-  /* width: 100%; */
 }
 
 /* me> ul 앞에 점 없애는거 */
@@ -29,10 +28,11 @@ ul, li{
 .header > ul > li{
   font-weight: 1000;
   color: rgb(255, 255, 230);
-  font-size: 18px;
+  font-size: 25px;
   width: 200px;
   height: 50px;
-
+  margin-top: 13px;
+  margin-left: 23px;
 }
 
 

@@ -1,8 +1,79 @@
+.first-container{
+  /* border: 1px solid palegreen; */
+  margin-top: 100px;
+  height: 500px;
+}
 
+.first-container > h3{
+  font-size: 25px;
+  margin-left: 100px;
+}
+
+.input1{
+  font-size: 17px;
+  margin-left: 60px;
+  margin-right: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.input1 > div > select{
+  border-color: rgb(233, 82, 105);
+  width: 70px;
+  height: 30px;
+  border-radius: 10px;
+  
+  font-size: 20px;
+  text-align: center;
+}
+
+.input1 > div > input{
+  border-color: rgb(233, 82, 105);
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 20px;
+}
 
 .table-container{
-  border-top: 3px solid black;
-  border-bottom: 3px solid black;
+  border-top: 3px solid rgb(206, 135, 206);
+  border-bottom: 3px solid rgb(206, 135, 206);
+  margin-left: 120px;
+  border-collapse: collapse;
+  width: 550px;
+  
+  text-align: center;
+}
+
+.table-container > thead > tr{
+  border-bottom: 3px solid rgb(206, 135, 206);
+  background-color: rgba(228, 175, 228, 0.541);
+
+  font-size: 25px;
+}
+
+tbody > tr{
+  font-size: 20px;
+}
+
+tbody> tr:nth-child(odd){
+  background-color: rgb(252, 211, 217);
+}
+
+tbody> tr:nth-child(even){
+  background-color: rgb(255, 184, 194);
+}
+
+.reg-button{
+  background-color: plum;
+  border-radius: 30px;
+  border-color: palevioletred;
+  font-size: 17px;
+  
+  width: 50px;
+  height: 30px;
+
+  margin-left: 655px;
 }
 
 

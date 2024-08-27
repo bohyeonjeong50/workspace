@@ -1,0 +1,60 @@
+.second-container{
+  /* border: 1px solid lightseagreen; */
+  margin-top: 100px;
+  height: 500px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.position{
+  font-size: 25px;
+  text-align: center;
+}
+
+.buyername > input{
+  border-color: rgb(233, 82, 105);
+  width: 500px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.selectbox > div > select{
+  border-color: rgb(233, 82, 105);
+  width: 220px;
+  height: 30px;
+  border-radius: 10px;
+  
+  font-size: 20px;
+  text-align: center;
+}
+
+.selectbox{
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 32px;
+}
+
+button{
+  background-color: plum;
+  border-radius: 30px;
+  border-color: palevioletred;
+  font-size: 17px;
+  
+  width: 50px;
+  height: 30px;
+
+  margin-left: 270px;
+}
+
+.callnumber{
+  margin-right: 180px;
+}
+
+.callnumber > input{
+  border-color: rgb(233, 82, 105);
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 20px;
+}

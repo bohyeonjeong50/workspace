@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import './SaleInfoReg.css'
 
 const SaleInfoReg = () => {
 
@@ -48,32 +49,37 @@ const SaleInfoReg = () => {
 
 
   return (
-    <div>
-      <div>
-        <div>구매자명 <input type='text' name='buyerName' onChange={(e) => {changeBuyerData(e)}} /></div>
+    <div className='second-container'>
+      <div className='position'>
+        <div className='buyername'>구매자명 <input type='text' name='buyerName' onChange={(e) => {changeBuyerData(e)}} />
+        </div><br/>
+        <div className='selectbox'>
         <div>
-        색상
-        <select name='carColor' onChange={(e) => {changeBuyerData(e)}}>
-          <option>블랙</option>
-          <option>화이트</option>
-          <option>실버</option>
-          <option>레드</option>
-        </select>
-        모델
-        <select name='carNum' onChange={(e) => {changeBuyerData(e)}}>
-          {
-            carNameData.map((nameCar, i) => {
-              return(
-                <option key={i} value={nameCar.carNum} >
-                  {nameCar.carName}
-                </option>
-              )
-            })
-          }
-        </select>
+          색상 
+            <select name='carColor' onChange={(e) => {changeBuyerData(e)}}>
+            <option>블랙</option>
+            <option>화이트</option>
+            <option>실버</option>
+            <option>레드</option>
+          </select>
         </div>
-        <div>연락처 <input type='text' name='buyerTel' onChange={(e) => {changeBuyerData(e)}}/></div>
-      </div>
+        <div>
+          모델 
+            <select name='carNum' onChange={(e) => {changeBuyerData(e)}}>
+            {
+              carNameData.map((nameCar, i) => {
+                return(
+                  <option key={i} value={nameCar.carNum} >
+                    {nameCar.carName}
+                  </option>
+                )
+              })
+            }
+          </select>
+        </div>
+        </div> <br/>
+        <div className='callnumber'>연락처 <input type='text' name='buyerTel' onChange={(e) => {changeBuyerData(e)}}/></div>
+      </div> <br/>
       <div>
         <button type='button' onClick={() => {regBuyer()}}>등록</button>
       </div>

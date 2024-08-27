@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import './reset.css';
 import './App.css';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import MainHome from './MainHome';
@@ -12,10 +13,13 @@ function App() {
   <div className='container'>
     <div className='header'>
         <ul>
-          <li><span on onClick={() => {navigate('/')}}>홈</span></li>
-          <li><span on onClick={() => {navigate('/carList')}}>차량관리</span></li>
-          <li><span on onClick={() => {navigate('/regForm')}}>판매 정보 등록</span></li>
-          <li><span on onClick={() => {navigate('/carAllList')}}>판매 목록</span></li>
+            <li><span on onClick={() => {navigate('/')}}>홈</span></li>
+          
+            <li><span on onClick={() => {navigate('/carList')}}>차량관리</span></li>
+          
+            <li><span on onClick={() => {navigate('/regForm')}}>판매 정보 등록</span></li>
+          
+            <li><span on onClick={() => {navigate('/carAllList')}}>판매 목록</span></li>
         </ul>
     </div>
 

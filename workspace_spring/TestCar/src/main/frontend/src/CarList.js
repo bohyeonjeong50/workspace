@@ -23,7 +23,7 @@ const CarList = () => {
   console.log(carAllInfo);
 
   return (
-    <div className='contailner'>
+    <div className='third-container'>
       <table className='first'>
         <thead className='head'>
           <tr>

@@ -47,25 +47,32 @@ const MainHome = () => {
   console.log(carListData)
 
   return (
-    <div>
-      <h3>차량등록</h3>
+    <div className='first-container'>
+      <span>
+        <i class="bi bi-car-front-fill"></i>
+      </span>
+      <h3>차량등록</h3> <br/>
 
-      <div>
-        제조사<select name='carCompany' onChange={(e) => {changeCarData(e)}}>
-          <option>현대</option>
-          <option>쌍용</option>
-          <option>기아</option>
-        </select>
-        모델명 <input type='text' name='carName' onChange={(e) => {changeCarData(e)}}/>
-        차량가격 <input type='text' name='carPrice' onChange={(e) => {changeCarData(e)}}/>
+      <div className='input1'>
+        <div>
+          제조사 <select name='carCompany' onChange={(e) => {changeCarData(e)}}>
+            <option>현대</option>
+            <option>쌍용</option>
+            <option>기아</option>
+          </select>
+        </div>
+        <div>모델명 <input type='text' name='carName' onChange={(e) => {changeCarData(e)}}/>
+        </div>
+        <div>차량가격 <input type='text' name='carPrice' onChange={(e) => {changeCarData(e)}}/>
+        </div>
       </div> <br/>
       <div>
-      <button type='button' onClick={() => {regCar()}} >
+      <button type='button' className='reg-button' onClick={() => {regCar()}} >
         등록
       </button>
-      </div>
+      </div> <br />
 
-      <h3>차량목록</h3>
+      <h3>차량목록</h3> <br/>
 
       <div className='table-all'>
         <table className='table-container'>

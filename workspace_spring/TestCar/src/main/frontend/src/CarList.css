@@ -1,7 +1,25 @@
-.first{
-  border: 1px solid black;
+.third-container{
+  /* border: 1px solid lightblue; */
+  margin-top: 100px;
+  height: 500px;
 }
 
-.head{
-  border: 1px solid black;
+.first{
+  border: 2px solid rgb(245, 199, 245);
+  margin-left: 50px;
+  width: 700px;
+
+  text-align: center;
 }
+
+.head > tr{
+  border: 2px solid rgb(245, 199, 245);
+  font-size: 25px;
+  background-color: rgba(228, 175, 228, 0.541);
+}
+
+tbody > tr{
+  font-size: 22px;
+}
+
+
