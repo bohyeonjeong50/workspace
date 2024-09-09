@@ -110,7 +110,7 @@ const Login = ({setLoginInfo, loginInfo}) => {
   return (
     <div>
       
-     <div>
+      <div>
         <div className = 'container'>
           <input type='text' name='memId' placeholder='ID를 입력하세요.' onChange={(e) => {changeLoginData(e)}}/> <br />
     
@@ -121,7 +121,7 @@ const Login = ({setLoginInfo, loginInfo}) => {
             <button type='button' className='btn btn-primary' onClick={(e) => {login()}}>로그인</button>
           </div>
         </div>
-     </div>
+      </div>
       
 
     {/* login 중 id, pw 입력 여부 확인 모달창  */}
