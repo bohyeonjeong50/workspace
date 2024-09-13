@@ -35,7 +35,7 @@ const DetailStu = () => {
   }, []);
 
   return(
-   <div>
+    <div>
       <div>상세보기</div>
       <div>
         <table>
