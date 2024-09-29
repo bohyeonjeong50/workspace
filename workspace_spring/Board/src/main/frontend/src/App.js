@@ -65,8 +65,8 @@ useEffect(() => {
         </div>
         <h1>자유게시판</h1>
       </div>
-     <div className='content'>
-       <Routes>
+    <div className='content'>
+      <Routes>
   
         {/* 게시글 목록 페이지 */}
         <Route path='/' element={ <BoardList loginInfo={loginInfo}/> } />
@@ -86,8 +86,8 @@ useEffect(() => {
         {/* 게시글 수정 페이지 */}
         <Route path='/updateForm/:boardNum' element={ <UpdateForm/> } />
   
-       </Routes>
-     </div>
+      </Routes>
+    </div>
 
     </div>
   );
