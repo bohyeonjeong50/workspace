@@ -1,0 +1,10 @@
+1. 로그인 요청
+2. LoginFilter 클래스의 attemptAuthentication 메서드 실행
+   -> 화면에서 입력받은 ID, PW를 AuthenticationNamaget에 전달
+3. UserDetailsServiceImpl 클래스의 loadUserByUsername() 실행
+  -> 데이터 베이스에서 로그인 하려면 회원의 id, pw, 권한 정보를 조회 후
+  AuthenticationManeget에 전달
+4. AuthenticationManager는 화면에서 전달받은 id, pw와
+  디비에서 가져온 id, pw를 비교해서 로그인 진행
+5. 로그인 결과에 따라서 LoginFilter 클래스의
+   
