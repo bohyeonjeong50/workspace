@@ -1,0 +1,15 @@
+<await> 
+
+await -> 비동기를 동기화 시켜주는 명령어
+await 명령어는 반드시 async 명령어와 함께 사용.
+async -> 동기를 비동기화
+
+
+
+
+<redux>
+상태 관리 라이브러리
+redux(복잡함, 개념잡기)
+redux-toolkit(확장팩 {코드의 간소화})
+
+
